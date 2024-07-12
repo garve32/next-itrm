@@ -1,0 +1,13 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+  },
+  "eslint.workingDirectories": [
+      {
+      "mode": "auto"
+      }
+  ],
+  "git.autofetch": true,
+}

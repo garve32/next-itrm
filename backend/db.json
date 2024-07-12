@@ -1,0 +1,991 @@
+{
+  "itrmList" : [
+  {
+  "MI_ID": "HWTW_EM_A0002",
+  "NAME": "[윤리경영] 시스템접속불가",
+  "MI_DESC": "IE모드로 수행 (Chrome 버전 비적용) - 사외(14.47.119.234) : stw_audit/xpzmdnls00!",
+  "TODO_ID": "HWTW_EM_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:03:41",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_A0002",
+  "NAME": "[IT-Service] 시스템 접속 불가",
+  "MI_DESC": "1. IT-Service 접속\r\n   -> 로그인 불가시 SLO 사용불가",
+  "TODO_ID": "HWTW_ITSVC_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:05",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_A0005",
+  "NAME": "[IT-Service] 후처리 서비스 정지",
+  "MI_DESC": "1. 10.42.237.74 원격 접속\r\n6. 로그 확인",
+  "TODO_ID": "HWTW_ITSVC_A0005.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:06",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_F0001",
+  "NAME": "[IT-Service] 배치 일괄 메일 발송 불가",
+  "MI_DESC": "1. 담당자에게 실패 안내 문제 다량 발송\r\n   -> 오류 메시지 분석",
+  "TODO_ID": "HWTW_ITSVC_F0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:08",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_F0002",
+  "NAME": "[IT-Service] EagleOffice와 사용자 정보 동기화 배치 실패",
+  "MI_DESC": "1. \\\\10.42.237.74 원격 접속\r\n" +
+    "D:\\ITSVC\\Log\\SyncLog\\SyncData\\Sync.log 파일 확인하여 문제 여부 판단\r\n" +
+    "2. 테크윈 EagleOffcie와 데이터 불일치로 결재 및 서비스 이용에 지장이 있을경우",
+  "TODO_ID": "HWTW_ITSVC_F0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:10",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_S0001",
+  "NAME": "[IT-Service] 첨부파일 첨부 불가",
+  "MI_DESC": "1. IT-Service 안에 있는 첨부파일 기능을 실행해본다.\r\n" +
+    "2. 운영서버 Log를 확인한다. \r\n' +
+    "   -> Result code 가 '0'이 아닌경우\r\n" +
+    '   -> 로그온 실패가 나올경우",
+  "TODO_ID": "HWTW_ITSVC_S0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:11",
+  "UPDATE_ID": "garve32"
+}
+]
+[
+{
+  "MI_ID": "HWTW_BSP_A0002",
+  "NAME": "[BSP] 시스템접속여부확인",
+  "MI_DESC": "1. BSP시스템 정상 접속 여부 확인\r\n" +
+    ". http://55.101.200.104:8081/bsp (BSP)\r\n" +
+    ". https://tips.hanwhaaerospace.co.kr:8443/bsp/index.html (사외특허, SRM서버)\r\n" +
+    "\r\n" +
+    "2. 위 url이 이상없이 접속이 되는지 확인한다. \r\n" +
+    "운영서버에 원격데스크톱으로 접속하여 서버 로그를 확인한다.",
+  "TODO_ID": "HWTW_BSP_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:49",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0003",
+  "NAME": "[BSP] 결재상신 오류확인",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 결재실패를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다. (시스템 - 결재이력조회)",
+  "TODO_ID": "HWTW_BSP_A0003.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:51",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0004",
+  "NAME": "[BSP] 메일발송 오류확인",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 메일실패를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다. (시스템 - 메일이력조회)",
+  "TODO_ID": "HWTW_BSP_A0004.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:53",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0005",
+  "NAME": "[BSP] SMS 전송오류확인",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 SMS전송실패를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다. (시스템 - SMS관리 - SMS이력관리)",
+  "TODO_ID": "HWTW_BSP_A0005.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:55",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0007",
+  "NAME": "[BSP] 결재 후처리 정상확인",
+  "MI_DESC": "1. 오류체크\r\n' +
+    "SELECT * FROM SINGLE_APPROVAL_AFTER_HIS WHERE SUCCESS_CD = 'N'\r\n" +
+    '\r\n" +
+    "2. 시스템관리 > 결재이력관리 > 결재ID로 조회한 후 후처리 컬럼 클릭하여 상세 조회한 후 재실행 또는\r\n" +
+    "SINGLE_APPROVAL_AFTER_HIS 테이블에서 에러메시지 확인 조치 후 재실행",
+  "TODO_ID": "HWTW_BSP_A0007.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:57",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_D0001",
+  "NAME": "[BSP] ECC I/F 오류",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 ECC(S-ERP)와 BSP시스템 데이터 불일치 여부를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다.\r\n" +
+    "(시스템 접속 오류 및 DB등 각종 I/F 수시로 확인, ECC(S-ERP)와 BSP 시스템 관련 Interface Batch Log 수시 확인)",
+  "TODO_ID": "HWTW_BSP_D0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:59",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_D0003",
+  "NAME": "[BSP] BATCH JOB 실행 오류",
+  "MI_DESC": "- BSP 접속 (http://10.42.237.144:8081/bsp)\r\n- 관리자 - BATCHJOB의 수행여부 확인",
+  "TODO_ID": "HWTW_BSP_D0003.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:01",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_P0001",
+  "NAME": "[BSP] 네트웍드라이브 연결 오류",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 SR로 ECC(S-ERP)와 BSP시스템 파일다운로드 문제를 파악한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다.",
+  "TODO_ID": "HWTW_BSP_P0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:03",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_COMP_A0002",
+  "NAME": "[Compliance] was 컨테이너 셧다운",
+  "MI_DESC": "1. 인프라 WAS 담당자에게 WAS 상태 확인\r\n" +
+    "2. JEUS 인스턴스 재기동 요청\r\n" +
+    "3. WAS 담당자에게 원인 분석요청\r\n" +
+    "4. 원인에 따라 시스템 변경",
+  "TODO_ID": "HWTW_COMP_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:33",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_COMP_A0003",
+  "NAME": "[Compliance] DB 아카이브 풀 발생",
+  "MI_DESC": "1. 인프라 DB 담당자에게 DB 상태 확인\r\n2. 원인에 따라 시스템 변경",
+  "TODO_ID": "HWTW_COMP_A0003.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:35",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_EM_A0002",
+  "NAME": "[윤리경영] 시스템접속불가",
+  "MI_DESC": "IE모드로 수행 (Chrome 버전 비적용)\r\n" +
+    "1. 시스템(사내 : 10.42.237.235:9001 사외 : https://audit.hanwhaaerospace.co.kr:1443/?COMP=T)접속이 되는지 확인한다.\r\n" +
+    "2. 운영서버에 접속하여 IIS상태를 확인한다.\r\n" +
+    " - 사내(55.200.100.93) : tmcadm/wovyql12!\r\n" +
+    " - 사외(14.47.119.234) : stw_audit/xpzmdnls00!",
+  "TODO_ID": "HWTW_EM_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:03:41",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_A0002",
+  "NAME": "[IT-Service] 시스템 접속 불가",
+  "MI_DESC": "1. IT-Service 접속\r\n" +
+    "   - http://10.42.237.74:5000\r\n" +
+    "   -> 에러메세지에 따라 원인파악\r\n" +
+    "2. IT-Service 로그인\r\n" +
+    "   - 테크윈 ID/PW 입력 후 로그인 시도\r\n" +
+    "   -> 로그인 불가시 SLO 사용불가",
+  "TODO_ID": "HWTW_ITSVC_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:05",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_A0005",
+  "NAME": "[IT-Service] 후처리 서비스 정지",
+  "MI_DESC": "1. 10.42.237.74 원격 접속\r\n" +
+    "2. C:\\Users\\testadmin\\Desktop\\기능별로그 에서 후처리 로그 확인\r\n" +
+    "- D:\\ITSVC\\Log\\SyncLog\\SyncAPStatus\\Sync.log\r\n" +
+    "- D:\\ITSVC\\yncAPStatusLog_HAS\r\n" +
+    "3. 마지막 실행 시간 확인 \r\n" +
+    "4. 정지 되어있을 경우  Windows 시작 -> 서비스 \r\n" +
+    "5. ITSERVICESYNC 서비스 정지 후 재시작 \r\n" +
+    "6. 로그 확인",
+  "TODO_ID": "HWTW_ITSVC_A0005.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:06",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_F0001",
+  "NAME": "[IT-Service] 배치 일괄 메일 발송 불가",
+  "MI_DESC": "1. 담당자에게 실패 안내 문제 다량 발송\r\n" +
+    "  -> 단건이 아닌 다량의 건이 실패할경우\r\n" +
+    "      문제가 있다고 판단\r\n" +
+    "2. STEP 를 통해 메일이력 조회\r\n" +
+    "   -> http://10.42.237.144:8083/ep/ 접속\r\n" +
+    "   -> 메일결재 -> 결재이력관리\r\n" +
+    "   -> 시스템 : IT-Service , 서버 : 그룹웨어, 상신일 : 에러일자 입력  후 조회\r\n" +
+    "   -> 오류 메시지 분석",
+  "TODO_ID": "HWTW_ITSVC_F0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:08",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_F0002",
+  "NAME": "[IT-Service] EagleOffice와 사용자 정보 동기화 배치 실패",
+  "MI_DESC": "1. \\\\10.42.237.74 원격 접속\r\n" +
+    "D:\\ITSVC\\Log\\SyncLog\\SyncData\\Sync.log 파일 확인하여 문제 여부 판단\r\n" +
+    "2. 테크윈 EagleOffcie와 데이터 불일치로 결재 및 서비스 이용에 지장이 있을경우",
+  "TODO_ID": "HWTW_ITSVC_F0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:10",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_S0001",
+  "NAME": "[IT-Service] 첨부파일 첨부 불가",
+  "MI_DESC": "1. IT-Service 안에 있는 첨부파일 기능을 실행해본다.\r\n" +
+    "2. 운영서버 Log를 확인한다. \r\n' +
+    "   -> Result code 가 '0'이 아닌경우\r\n" +
+    '   -> 로그온 실패가 나올경우",
+  "TODO_ID": "HWTW_ITSVC_S0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:11",
+  "UPDATE_ID": "garve32"
+}
+]
+[
+{
+  "MI_ID": "HWTW_BSP_A0002",
+  "NAME": "[BSP] 시스템접속여부확인",
+  "MI_DESC": "1. BSP시스템 정상 접속 여부 확인\r\n" +
+    ". http://55.101.200.104:8081/bsp (BSP)\r\n" +
+    ". https://tips.hanwhaaerospace.co.kr:8443/bsp/index.html (사외특허, SRM서버)\r\n" +
+    "\r\n" +
+    "2. 위 url이 이상없이 접속이 되는지 확인한다. \r\n" +
+    "운영서버에 원격데스크톱으로 접속하여 서버 로그를 확인한다.",
+  "TODO_ID": "HWTW_BSP_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:49",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0003",
+  "NAME": "[BSP] 결재상신 오류확인",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 결재실패를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다. (시스템 - 결재이력조회)",
+  "TODO_ID": "HWTW_BSP_A0003.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:51",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0004",
+  "NAME": "[BSP] 메일발송 오류확인",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 메일실패를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다. (시스템 - 메일이력조회)",
+  "TODO_ID": "HWTW_BSP_A0004.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:53",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0005",
+  "NAME": "[BSP] SMS 전송오류확인",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 SMS전송실패를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다. (시스템 - SMS관리 - SMS이력관리)",
+  "TODO_ID": "HWTW_BSP_A0005.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:55",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0007",
+  "NAME": "[BSP] 결재 후처리 정상확인",
+  "MI_DESC": "1. 오류체크\r\n' +
+    "SELECT * FROM SINGLE_APPROVAL_AFTER_HIS WHERE SUCCESS_CD = 'N'\r\n" +
+    '\r\n" +
+    "2. 시스템관리 > 결재이력관리 > 결재ID로 조회한 후 후처리 컬럼 클릭하여 상세 조회한 후 재실행 또는\r\n" +
+    "SINGLE_APPROVAL_AFTER_HIS 테이블에서 에러메시지 확인 조치 후 재실행",
+  "TODO_ID": "HWTW_BSP_A0007.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:57",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_D0001",
+  "NAME": "[BSP] ECC I/F 오류",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 ECC(S-ERP)와 BSP시스템 데이터 불일치 여부를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다.\r\n" +
+    "(시스템 접속 오류 및 DB등 각종 I/F 수시로 확인, ECC(S-ERP)와 BSP 시스템 관련 Interface Batch Log 수시 확인)",
+  "TODO_ID": "HWTW_BSP_D0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:59",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_D0003",
+  "NAME": "[BSP] BATCH JOB 실행 오류",
+  "MI_DESC": "- BSP 접속 (http://10.42.237.144:8081/bsp)\r\n- 관리자 - BATCHJOB의 수행여부 확인",
+  "TODO_ID": "HWTW_BSP_D0003.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:01",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_P0001",
+  "NAME": "[BSP] 네트웍드라이브 연결 오류",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 SR로 ECC(S-ERP)와 BSP시스템 파일다운로드 문제를 파악한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다.",
+  "TODO_ID": "HWTW_BSP_P0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:03",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_COMP_A0002",
+  "NAME": "[Compliance] was 컨테이너 셧다운",
+  "MI_DESC": "1. 인프라 WAS 담당자에게 WAS 상태 확인\r\n" +
+    "2. JEUS 인스턴스 재기동 요청\r\n" +
+    "3. WAS 담당자에게 원인 분석요청\r\n" +
+    "4. 원인에 따라 시스템 변경",
+  "TODO_ID": "HWTW_COMP_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:33",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_COMP_A0003",
+  "NAME": "[Compliance] DB 아카이브 풀 발생",
+  "MI_DESC": "1. 인프라 DB 담당자에게 DB 상태 확인\r\n2. 원인에 따라 시스템 변경",
+  "TODO_ID": "HWTW_COMP_A0003.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:35",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_EM_A0002",
+  "NAME": "[윤리경영] 시스템접속불가",
+  "MI_DESC": "IE모드로 수행 (Chrome 버전 비적용)\r\n" +
+    "1. 시스템(사내 : 10.42.237.235:9001 사외 : https://audit.hanwhaaerospace.co.kr:1443/?COMP=T)접속이 되는지 확인한다.\r\n" +
+    "2. 운영서버에 접속하여 IIS상태를 확인한다.\r\n" +
+    " - 사내(55.200.100.93) : tmcadm/wovyql12!\r\n" +
+    " - 사외(14.47.119.234) : stw_audit/xpzmdnls00!",
+  "TODO_ID": "HWTW_EM_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:03:41",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_A0002",
+  "NAME": "[IT-Service] 시스템 접속 불가",
+  "MI_DESC": "1. IT-Service 접속\r\n" +
+    "   - http://10.42.237.74:5000\r\n" +
+    "   -> 에러메세지에 따라 원인파악\r\n" +
+    "2. IT-Service 로그인\r\n" +
+    "   - 테크윈 ID/PW 입력 후 로그인 시도\r\n" +
+    "   -> 로그인 불가시 SLO 사용불가",
+  "TODO_ID": "HWTW_ITSVC_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:05",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_A0005",
+  "NAME": "[IT-Service] 후처리 서비스 정지",
+  "MI_DESC": "1. 10.42.237.74 원격 접속\r\n" +
+    "2. C:\\Users\\testadmin\\Desktop\\기능별로그 에서 후처리 로그 확인\r\n" +
+    "- D:\\ITSVC\\Log\\SyncLog\\SyncAPStatus\\Sync.log\r\n" +
+    "- D:\\ITSVC\\yncAPStatusLog_HAS\r\n" +
+    "3. 마지막 실행 시간 확인 \r\n" +
+    "4. 정지 되어있을 경우  Windows 시작 -> 서비스 \r\n" +
+    "5. ITSERVICESYNC 서비스 정지 후 재시작 \r\n" +
+    "6. 로그 확인",
+  "TODO_ID": "HWTW_ITSVC_A0005.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:06",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_F0001",
+  "NAME": "[IT-Service] 배치 일괄 메일 발송 불가",
+  "MI_DESC": "1. 담당자에게 실패 안내 문제 다량 발송\r\n" +
+    "  -> 단건이 아닌 다량의 건이 실패할경우\r\n" +
+    "      문제가 있다고 판단\r\n" +
+    "2. STEP 를 통해 메일이력 조회\r\n" +
+    "   -> http://10.42.237.144:8083/ep/ 접속\r\n" +
+    "   -> 메일결재 -> 결재이력관리\r\n" +
+    "   -> 시스템 : IT-Service , 서버 : 그룹웨어, 상신일 : 에러일자 입력  후 조회\r\n" +
+    "   -> 오류 메시지 분석",
+  "TODO_ID": "HWTW_ITSVC_F0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:08",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_F0002",
+  "NAME": "[IT-Service] EagleOffice와 사용자 정보 동기화 배치 실패",
+  "MI_DESC": "1. \\\\10.42.237.74 원격 접속\r\n" +
+    "D:\\ITSVC\\Log\\SyncLog\\SyncData\\Sync.log 파일 확인하여 문제 여부 판단\r\n" +
+    "2. 테크윈 EagleOffcie와 데이터 불일치로 결재 및 서비스 이용에 지장이 있을경우",
+  "TODO_ID": "HWTW_ITSVC_F0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:10",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_S0001",
+  "NAME": "[IT-Service] 첨부파일 첨부 불가",
+  "MI_DESC": "1. IT-Service 안에 있는 첨부파일 기능을 실행해본다.\r\n" +
+    "2. 운영서버 Log를 확인한다. \r\n' +
+    "   -> Result code 가 '0'이 아닌경우\r\n" +
+    '   -> 로그온 실패가 나올경우",
+  "TODO_ID": "HWTW_ITSVC_S0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:11",
+  "UPDATE_ID": "garve32"
+}
+]
+[
+{
+  "MI_ID": "HWTW_BSP_A0002",
+  "NAME": "[BSP] 시스템접속여부확인",
+  "MI_DESC": "1. BSP시스템 정상 접속 여부 확인\r\n" +
+    ". http://55.101.200.104:8081/bsp (BSP)\r\n" +
+    ". https://tips.hanwhaaerospace.co.kr:8443/bsp/index.html (사외특허, SRM서버)\r\n" +
+    "\r\n" +
+    "2. 위 url이 이상없이 접속이 되는지 확인한다. \r\n" +
+    "운영서버에 원격데스크톱으로 접속하여 서버 로그를 확인한다.",
+  "TODO_ID": "HWTW_BSP_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:49",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0003",
+  "NAME": "[BSP] 결재상신 오류확인",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 결재실패를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다. (시스템 - 결재이력조회)",
+  "TODO_ID": "HWTW_BSP_A0003.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:51",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0004",
+  "NAME": "[BSP] 메일발송 오류확인",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 메일실패를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다. (시스템 - 메일이력조회)",
+  "TODO_ID": "HWTW_BSP_A0004.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:53",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0005",
+  "NAME": "[BSP] SMS 전송오류확인",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 SMS전송실패를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다. (시스템 - SMS관리 - SMS이력관리)",
+  "TODO_ID": "HWTW_BSP_A0005.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:55",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0007",
+  "NAME": "[BSP] 결재 후처리 정상확인",
+  "MI_DESC": "1. 오류체크\r\n' +
+    "SELECT * FROM SINGLE_APPROVAL_AFTER_HIS WHERE SUCCESS_CD = 'N'\r\n" +
+    '\r\n" +
+    "2. 시스템관리 > 결재이력관리 > 결재ID로 조회한 후 후처리 컬럼 클릭하여 상세 조회한 후 재실행 또는\r\n" +
+    "SINGLE_APPROVAL_AFTER_HIS 테이블에서 에러메시지 확인 조치 후 재실행",
+  "TODO_ID": "HWTW_BSP_A0007.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:57",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_D0001",
+  "NAME": "[BSP] ECC I/F 오류",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 ECC(S-ERP)와 BSP시스템 데이터 불일치 여부를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다.\r\n" +
+    "(시스템 접속 오류 및 DB등 각종 I/F 수시로 확인, ECC(S-ERP)와 BSP 시스템 관련 Interface Batch Log 수시 확인)",
+  "TODO_ID": "HWTW_BSP_D0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:59",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_D0003",
+  "NAME": "[BSP] BATCH JOB 실행 오류",
+  "MI_DESC": "- BSP 접속 (http://10.42.237.144:8081/bsp)\r\n- 관리자 - BATCHJOB의 수행여부 확인",
+  "TODO_ID": "HWTW_BSP_D0003.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:01",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_P0001",
+  "NAME": "[BSP] 네트웍드라이브 연결 오류",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 SR로 ECC(S-ERP)와 BSP시스템 파일다운로드 문제를 파악한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다.",
+  "TODO_ID": "HWTW_BSP_P0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:03",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_COMP_A0002",
+  "NAME": "[Compliance] was 컨테이너 셧다운",
+  "MI_DESC": "1. 인프라 WAS 담당자에게 WAS 상태 확인\r\n" +
+    "2. JEUS 인스턴스 재기동 요청\r\n" +
+    "3. WAS 담당자에게 원인 분석요청\r\n" +
+    "4. 원인에 따라 시스템 변경",
+  "TODO_ID": "HWTW_COMP_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:33",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_COMP_A0003",
+  "NAME": "[Compliance] DB 아카이브 풀 발생",
+  "MI_DESC": "1. 인프라 DB 담당자에게 DB 상태 확인\r\n2. 원인에 따라 시스템 변경",
+  "TODO_ID": "HWTW_COMP_A0003.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:35",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_EM_A0002",
+  "NAME": "[윤리경영] 시스템접속불가",
+  "MI_DESC": "IE모드로 수행 (Chrome 버전 비적용)\r\n" +
+    "1. 시스템(사내 : 10.42.237.235:9001 사외 : https://audit.hanwhaaerospace.co.kr:1443/?COMP=T)접속이 되는지 확인한다.\r\n" +
+    "2. 운영서버에 접속하여 IIS상태를 확인한다.\r\n" +
+    " - 사내(55.200.100.93) : tmcadm/wovyql12!\r\n" +
+    " - 사외(14.47.119.234) : stw_audit/xpzmdnls00!",
+  "TODO_ID": "HWTW_EM_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:03:41",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_A0002",
+  "NAME": "[IT-Service] 시스템 접속 불가",
+  "MI_DESC": "1. IT-Service 접속\r\n" +
+    "   - http://10.42.237.74:5000\r\n" +
+    "   -> 에러메세지에 따라 원인파악\r\n" +
+    "2. IT-Service 로그인\r\n" +
+    "   - 테크윈 ID/PW 입력 후 로그인 시도\r\n" +
+    "   -> 로그인 불가시 SLO 사용불가",
+  "TODO_ID": "HWTW_ITSVC_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:05",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_A0005",
+  "NAME": "[IT-Service] 후처리 서비스 정지",
+  "MI_DESC": "1. 10.42.237.74 원격 접속\r\n" +
+    "2. C:\\Users\\testadmin\\Desktop\\기능별로그 에서 후처리 로그 확인\r\n" +
+    "- D:\\ITSVC\\Log\\SyncLog\\SyncAPStatus\\Sync.log\r\n" +
+    "- D:\\ITSVC\\yncAPStatusLog_HAS\r\n" +
+    "3. 마지막 실행 시간 확인 \r\n" +
+    "4. 정지 되어있을 경우  Windows 시작 -> 서비스 \r\n" +
+    "5. ITSERVICESYNC 서비스 정지 후 재시작 \r\n" +
+    "6. 로그 확인",
+  "TODO_ID": "HWTW_ITSVC_A0005.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:06",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_F0001",
+  "NAME": "[IT-Service] 배치 일괄 메일 발송 불가",
+  "MI_DESC": "1. 담당자에게 실패 안내 문제 다량 발송\r\n" +
+    "  -> 단건이 아닌 다량의 건이 실패할경우\r\n" +
+    "      문제가 있다고 판단\r\n" +
+    "2. STEP 를 통해 메일이력 조회\r\n" +
+    "   -> http://10.42.237.144:8083/ep/ 접속\r\n" +
+    "   -> 메일결재 -> 결재이력관리\r\n" +
+    "   -> 시스템 : IT-Service , 서버 : 그룹웨어, 상신일 : 에러일자 입력  후 조회\r\n" +
+    "   -> 오류 메시지 분석",
+  "TODO_ID": "HWTW_ITSVC_F0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:08",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_F0002",
+  "NAME": "[IT-Service] EagleOffice와 사용자 정보 동기화 배치 실패",
+  "MI_DESC": "1. \\\\10.42.237.74 원격 접속\r\n" +
+    "D:\\ITSVC\\Log\\SyncLog\\SyncData\\Sync.log 파일 확인하여 문제 여부 판단\r\n" +
+    "2. 테크윈 EagleOffcie와 데이터 불일치로 결재 및 서비스 이용에 지장이 있을경우",
+  "TODO_ID": "HWTW_ITSVC_F0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:10",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_S0001",
+  "NAME": "[IT-Service] 첨부파일 첨부 불가",
+  "MI_DESC": "1. IT-Service 안에 있는 첨부파일 기능을 실행해본다.\r\n" +
+    "2. 운영서버 Log를 확인한다. \r\n' +
+    "   -> Result code 가 '0'이 아닌경우\r\n" +
+    '   -> 로그온 실패가 나올경우",
+  "TODO_ID": "HWTW_ITSVC_S0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:11",
+  "UPDATE_ID": "garve32"
+}
+]
+[
+{
+  "MI_ID": "HWTW_BSP_A0002",
+  "NAME": "[BSP] 시스템접속여부확인",
+  "MI_DESC": "1. BSP시스템 정상 접속 여부 확인\r\n" +
+    ". http://55.101.200.104:8081/bsp (BSP)\r\n" +
+    ". https://tips.hanwhaaerospace.co.kr:8443/bsp/index.html (사외특허, SRM서버)\r\n" +
+    "\r\n" +
+    "2. 위 url이 이상없이 접속이 되는지 확인한다. \r\n" +
+    "운영서버에 원격데스크톱으로 접속하여 서버 로그를 확인한다.",
+  "TODO_ID": "HWTW_BSP_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:49",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0003",
+  "NAME": "[BSP] 결재상신 오류확인",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 결재실패를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다. (시스템 - 결재이력조회)",
+  "TODO_ID": "HWTW_BSP_A0003.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:51",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0004",
+  "NAME": "[BSP] 메일발송 오류확인",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 메일실패를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다. (시스템 - 메일이력조회)",
+  "TODO_ID": "HWTW_BSP_A0004.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:53",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0005",
+  "NAME": "[BSP] SMS 전송오류확인",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 SMS전송실패를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다. (시스템 - SMS관리 - SMS이력관리)",
+  "TODO_ID": "HWTW_BSP_A0005.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:55",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_A0007",
+  "NAME": "[BSP] 결재 후처리 정상확인",
+  "MI_DESC": "1. 오류체크\r\n' +
+    "SELECT * FROM SINGLE_APPROVAL_AFTER_HIS WHERE SUCCESS_CD = 'N'\r\n" +
+    '\r\n" +
+    "2. 시스템관리 > 결재이력관리 > 결재ID로 조회한 후 후처리 컬럼 클릭하여 상세 조회한 후 재실행 또는\r\n" +
+    "SINGLE_APPROVAL_AFTER_HIS 테이블에서 에러메시지 확인 조치 후 재실행",
+  "TODO_ID": "HWTW_BSP_A0007.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:57",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_D0001",
+  "NAME": "[BSP] ECC I/F 오류",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 Service Request로 ECC(S-ERP)와 BSP시스템 데이터 불일치 여부를 확인한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다.\r\n" +
+    "(시스템 접속 오류 및 DB등 각종 I/F 수시로 확인, ECC(S-ERP)와 BSP 시스템 관련 Interface Batch Log 수시 확인)",
+  "TODO_ID": "HWTW_BSP_D0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:16:59",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_D0003",
+  "NAME": "[BSP] BATCH JOB 실행 오류",
+  "MI_DESC": "- BSP 접속 (http://10.42.237.144:8081/bsp)\r\n- 관리자 - BATCHJOB의 수행여부 확인",
+  "TODO_ID": "HWTW_BSP_D0003.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:01",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_BSP_P0001",
+  "NAME": "[BSP] 네트웍드라이브 연결 오류",
+  "MI_DESC": "- 시스템 사용자(현업)가 요청한 SR로 ECC(S-ERP)와 BSP시스템 파일다운로드 문제를 파악한다.\r\n" +
+    "(Process Portal 등이나 전화, 메일 등 여러 방법으로 운영 담당자에게 전파함) \r\n" +
+    "- 시스템 운영 담당자의 주기적인 수시 모니터링으로 감지한다.",
+  "TODO_ID": "HWTW_BSP_P0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:03",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_COMP_A0002",
+  "NAME": "[Compliance] was 컨테이너 셧다운",
+  "MI_DESC": "1. 인프라 WAS 담당자에게 WAS 상태 확인\r\n" +
+    "2. JEUS 인스턴스 재기동 요청\r\n" +
+    "3. WAS 담당자에게 원인 분석요청\r\n" +
+    "4. 원인에 따라 시스템 변경",
+  "TODO_ID": "HWTW_COMP_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:33",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_COMP_A0003",
+  "NAME": "[Compliance] DB 아카이브 풀 발생",
+  "MI_DESC": "1. 인프라 DB 담당자에게 DB 상태 확인\r\n2. 원인에 따라 시스템 변경",
+  "TODO_ID": "HWTW_COMP_A0003.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:35",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_EM_A0002",
+  "NAME": "[윤리경영] 시스템접속불가",
+  "MI_DESC": "IE모드로 수행 (Chrome 버전 비적용)\r\n" +
+    "1. 시스템(사내 : 10.42.237.235:9001 사외 : https://audit.hanwhaaerospace.co.kr:1443/?COMP=T)접속이 되는지 확인한다.\r\n" +
+    "2. 운영서버에 접속하여 IIS상태를 확인한다.\r\n" +
+    " - 사내(55.200.100.93) : tmcadm/wovyql12!\r\n" +
+    " - 사외(14.47.119.234) : stw_audit/xpzmdnls00!",
+  "TODO_ID": "HWTW_EM_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:03:41",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_A0002",
+  "NAME": "[IT-Service] 시스템 접속 불가",
+  "MI_DESC": "1. IT-Service 접속\r\n" +
+    "   - http://10.42.237.74:5000\r\n" +
+    "   -> 에러메세지에 따라 원인파악\r\n" +
+    "2. IT-Service 로그인\r\n" +
+    "   - 테크윈 ID/PW 입력 후 로그인 시도\r\n" +
+    "   -> 로그인 불가시 SLO 사용불가",
+  "TODO_ID": "HWTW_ITSVC_A0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:05",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_A0005",
+  "NAME": "[IT-Service] 후처리 서비스 정지",
+  "MI_DESC": "1. 10.42.237.74 원격 접속\r\n" +
+    "2. C:\\Users\\testadmin\\Desktop\\기능별로그 에서 후처리 로그 확인\r\n" +
+    "- D:\\ITSVC\\Log\\SyncLog\\SyncAPStatus\\Sync.log\r\n" +
+    "- D:\\ITSVC\\yncAPStatusLog_HAS\r\n" +
+    "3. 마지막 실행 시간 확인 \r\n" +
+    "4. 정지 되어있을 경우  Windows 시작 -> 서비스 \r\n" +
+    "5. ITSERVICESYNC 서비스 정지 후 재시작 \r\n" +
+    "6. 로그 확인",
+  "TODO_ID": "HWTW_ITSVC_A0005.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:06",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_F0001",
+  "NAME": "[IT-Service] 배치 일괄 메일 발송 불가",
+  "MI_DESC": "1. 담당자에게 실패 안내 문제 다량 발송\r\n" +
+    "  -> 단건이 아닌 다량의 건이 실패할경우\r\n" +
+    "      문제가 있다고 판단\r\n" +
+    "2. STEP 를 통해 메일이력 조회\r\n" +
+    "   -> http://10.42.237.144:8083/ep/ 접속\r\n" +
+    "   -> 메일결재 -> 결재이력관리\r\n" +
+    "   -> 시스템 : IT-Service , 서버 : 그룹웨어, 상신일 : 에러일자 입력  후 조회\r\n" +
+    "   -> 오류 메시지 분석",
+  "TODO_ID": "HWTW_ITSVC_F0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:08",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_F0002",
+  "NAME": "[IT-Service] EagleOffice와 사용자 정보 동기화 배치 실패",
+  "MI_DESC": "1. \\\\10.42.237.74 원격 접속\r\n" +
+    "D:\\ITSVC\\Log\\SyncLog\\SyncData\\Sync.log 파일 확인하여 문제 여부 판단\r\n" +
+    "2. 테크윈 EagleOffcie와 데이터 불일치로 결재 및 서비스 이용에 지장이 있을경우",
+  "TODO_ID": "HWTW_ITSVC_F0002.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:10",
+  "UPDATE_ID": "garve32"
+},
+{
+  "MI_ID": "HWTW_ITSVC_S0001",
+  "NAME": "[IT-Service] 첨부파일 첨부 불가",
+  "MI_DESC": "1. IT-Service 안에 있는 첨부파일 기능을 실행해본다.\r\n" +
+    "2. 운영서버 Log를 확인한다. \r\n' +
+    "   -> Result code 가 '0'이 아닌경우\r\n" +
+    '   -> 로그온 실패가 나올경우",
+  "TODO_ID": "HWTW_ITSVC_S0001.1",
+  "TODO_DT": "20240712",
+  "DESCRIPTION": "정상 확인",
+  "PROGRESS": "S",
+  "UPDATE_DT": "2024-07-12 08:17:11",
+  "UPDATE_ID": "garve32"
+}
+]
+}
