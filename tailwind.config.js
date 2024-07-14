@@ -11,6 +11,32 @@ module.exports = {
     extend: {},
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [nextui({
+    prefix: "nextui",
+    defaultTheme: "light", // default theme from the themes object
+    defaultExtendTheme: "light", // default theme to extend on custom themes
+    layout: {
+      fontSize: {
+        tiny: "0.75rem", // text-tiny
+        small: "0.75rem", // text-small
+        medium: "1rem", // text-medium
+        large: "1.125rem", // text-large
+      },
+    },
+    themes: {
+      light: {
+        layout: {}, // light theme layout tokens
+        colors: {}, // light theme colors
+      },
+      dark: {
+        layout: {}, // dark theme layout tokens
+        colors: {
+          background: "#262626",
+          foreground: "#ffffff",
+        }, // dark theme colors
+      },
+      // ... custom themes
+    },
+  })],
 }
 

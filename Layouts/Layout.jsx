@@ -1,51 +1,26 @@
-import { Button, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@nextui-org/react'
+import TopNav from '@/components/nav/TopNav'
+import { Divider, Spacer } from '@nextui-org/react'
+// import localFont from 'next/font/local';
+
+// const inter = Inter({ subsets: ['latin'] });
+// const itrmFont = localFont({ src: '../font/NanumGothic.woff2'})
+
+// const itrmFont = localFont({
+//   src: [
+//     {
+//       path: '../font/NanumGothic.woff2'
+//     }
+//   ],
+//   display: 'swap'
+// });
 
 export default function Layout({ children }) {
   
   return (
+    // <div className={itrmFont.className}>
     <div>
-      <Navbar>
-      <NavbarBrand>
-        {/* <AcmeLogo /> */}
-        <p className="font-bold text-inherit">ACME</p>
-      </NavbarBrand>
-      <NavbarContent className="sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
-      {/* <nav>
-        <Link href="/">HOME</Link>
-        <div>
-          <nav>
-            <Link href="/">TEST</Link>
-            <Link href="/itrm">ITRM</Link>
-          </nav>
-        </div>
-      </nav> */}
+      <TopNav />
+      <Spacer y={4} />
       <div>{children}</div>
     </div>
   )

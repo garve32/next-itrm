@@ -1,89 +1,69 @@
-import { Button, Table,  TableHeader,  TableBody,  TableColumn,  TableRow,  TableCell, getKeyValue, Calendar} from "@nextui-org/react";
+import { Button, Table,  TableHeader,  TableBody,  TableColumn,  TableRow,  TableCell, getKeyValue, Calendar, useDisclosure, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Spacer, Chip} from "@nextui-org/react";
 import styles from './ItrmList.module.css';
-import {today, getLocalTimeZone, isWeekend} from "@internationalized/date";
-import {I18nProvider, useLocale} from "@react-aria/i18n";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ItrmItem from "./ItrmItem";
+import { fetchMockItem, fetchMockList } from "@/api";
+import ItrmCal from "../calendar/ItrmCal";
+import SystemLink from "../widgets/SystemLink";
 
-function ItrmList({ itrmList }) {
+function ItrmList() {
 
-  let [date, setDate] = useState(today(getLocalTimeZone()));
-  let {locale} = useLocale();
-  let isInvalid = isWeekend(date, locale);
-  const renderCell = ({item, columnKey}) => {
-    const cellValue = item[columnKey];
-    return (
-      <div className="flex flex-col">
-            <p className="text-bold text-sm capitalize">{cellValue}</p>
-            <p className="text-bold text-sm capitalize text-default-400">{item.MI_ID}</p>
-      </div>
-    );
+  const [itrmList, setItrmList] = useState(null);
+  const [item, setItem] = useState(null);
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+
+  const getList = async(paramDt) => {
+    const params = {TODO_DT: paramDt, TEAM_ID: 'teamId', USER_ID: 'userId'}
+    console.log(params);
+    const response = await fetchMockList(params);
+    setItrmList(response.data);
   }
+
+  const getItem = async(todoId) => {
+    const {data} = await fetchMockItem(todoId);
+    setItem(data[0]);
+    onOpen();
+  }
+
   return (
-    <div className="flex flex-row gap-4">
-      <I18nProvider locale="ko-KR">
-      <Calendar
-      aria-label="cal"
-      defaultValue={today(getLocalTimeZone())}
-      maxValue={today(getLocalTimeZone())}
-      showMonthAndYearPickers='true'
-      errorMessage={isInvalid ? "주말엔 놀기" : undefined}
-      isInvalid={isInvalid}
-      onChange={setDate}
-    />
-    </I18nProvider>
-    <div>
-      {/* <div>{itrmList.data}</div> */}
-      <Table color='primary'
-        selectionMode="single" aria-label="Example static collection table">
-      <TableHeader>
-        <TableColumn>NAME</TableColumn>
-        <TableColumn>ROLE</TableColumn>
-        <TableColumn>STATUS</TableColumn>
-        <TableColumn>STATUS</TableColumn>
-      </TableHeader>
-      <TableBody items={itrmList.data}>
-        {/* {(item) => (
-          
-          <TableRow key={item.TODO_ID}>
-            console.log(item.MI_ID);
-          {(columnKey) => <TableCell>{getKeyValue(item, columnKey)}</TableCell>}
-        </TableRow>
-        )} */}
-        {itrmList.data.map(d => {
-          return (
-            <TableRow key={d.TODO_ID}>
-              <TableCell>{d.MI_ID}</TableCell>
-              <TableCell>{d.TODO_ID}</TableCell>
-              <TableCell>{d.PROGRESS}</TableCell>
-              <TableCell>{d.UPDATE_ID}</TableCell>
-            </TableRow>
-          );
-        })}
-        {/* <TableRow key="1">
-          <TableCell>Tony Reichert</TableCell>
-          <TableCell>CEO</TableCell>
-          <TableCell>Active</TableCell>
-        </TableRow>
-        <TableRow key="2">
-          <TableCell>Zoey Lang</TableCell>
-          <TableCell>Technical Lead</TableCell>
-          <TableCell>Paused</TableCell>
-        </TableRow>
-        <TableRow key="3">
-          <TableCell>Jane Fisher</TableCell>
-          <TableCell>Senior Developer</TableCell>
-          <TableCell>Active</TableCell>
-        </TableRow>
-        <TableRow key="4">
-          <TableCell>William Howard</TableCell>
-          <TableCell>Community Manager</TableCell>
-          <TableCell>Vacation</TableCell>
-        </TableRow> */}
-      </TableBody>
-    </Table>
-    </div>
+    <div className="flex flex-row text-small">
+      
+      <div className="flex flex-col">
+        <ItrmCal handler={getList}/>
+        <Spacer y={4} />
+        <SystemLink />
+      </div>
+      <Spacer x={4} />
+      <div className='w-full'>
+        <Table color='default'
+          selectionMode="single" aria-label="Example static collection table"
+        >
+          <TableHeader >
+            <TableColumn className='min-w-40'>TODO ID</TableColumn>
+            <TableColumn className='min-w-[24rem]'>제목</TableColumn>
+            <TableColumn className='min-w-24'>상태</TableColumn>
+            <TableColumn>처리자</TableColumn>
+            <TableColumn className='min-w-40'>수정일시</TableColumn>
+          </TableHeader>
+          <TableBody emptyContent={"No rows to display."}>
+            {itrmList && itrmList.data.map(d => {
+              return (
+                <TableRow key={d.TODO_ID} onClick={() => {getItem(d.TODO_ID)}}>
+                  <TableCell className='py-1 cursor-pointer'>{d.TODO_ID}</TableCell>
+                  <TableCell className='py-1 cursor-pointer'>{d.NAME}</TableCell>
+                  <TableCell className='py-1 cursor-pointer'>{d.PROGRESS}<Chip color="success" size='sm' variant="flat">Success</Chip></TableCell>
+                  <TableCell className='py-1'>{d.UPDATE_ID}</TableCell>
+                  <TableCell className='py-1'>{d.UPDATE_DT}</TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </div>
+      <ItrmItem isOpen={isOpen} onOpenChange={onOpenChange} itrmItem={item}/>
+     
 		</div>
   )
 }
 
-export default ItrmList
+export default ItrmList;
