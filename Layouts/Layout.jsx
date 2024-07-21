@@ -18,7 +18,7 @@ export default function Layout({ children }) {
   
   return (
     // <div className={itrmFont.className}>
-    <div>
+    <div className='min-x-[1280px]'>
       <TopNav />
       <Spacer y={4} />
       <div>{children}</div>

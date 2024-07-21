@@ -1,4 +1,5 @@
 import {nextui} from '@nextui-org/theme'
+import { Container } from 'postcss'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    container: {
+      center: true,
+    }
   },
   darkMode: "class",
   plugins: [nextui({

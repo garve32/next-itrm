@@ -1,43 +1,38 @@
 import {I18nProvider, useLocale} from "@react-aria/i18n";
 import {today, getLocalTimeZone, isWeekend } from "@internationalized/date";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Calendar } from "@nextui-org/react";
-import {useDateFormatter} from "@react-aria/i18n";
+import { calDateToStr } from "@/utils/DateUtils";
 
-export default function ItrmCal({handler}) {
-  let [date, setDate] = useState(today(getLocalTimeZone()));
+export default function ItrmCal({ handler, selDate, setSelDate }) {
   let {locale} = useLocale();
-  let isInvalid = isWeekend(date, locale);
+  let isInvalid = isWeekend(selDate, locale);
+  const weekendMsg = '주말점검은 선택사항입니다.';
 
-  let formatter = useDateFormatter({dateStyle: "short"});
+  useEffect(() => {
+    // console.log(handler)
+    selectDate(selDate);
+  }, []);
 
-  // useEffect(() => {
-  //   console.log(handler)
-  // }, []);
-
-  const selectDate = async(sdate) => {
-    // 선택한 데이터를 저장하고
-    setDate(sdate);
-    // console.log(sdate);
-    console.log(sdate.toDate(getLocalTimeZone()))
-    const shortDate = formatter.format(sdate.toDate(getLocalTimeZone())) ;
-    console.log(shortDate)
-    
+  const selectDate = (sdate) => {
+    // 선택한 데이터를 저장하고(date 형식)
+    setSelDate(sdate);
+    // YYYYMMDD 형식으로 변환한 후
+    const formedDate = calDateToStr(sdate.toDate());
     // getList 핸들러 수행
-    handler(sdate);
+    handler(formedDate);
   }
   
   return (
     <I18nProvider locale="ko-KR">
       <Calendar
-      aria-label="cal"
+      aria-label="calendar"
       defaultValue={today(getLocalTimeZone())}
       maxValue={today(getLocalTimeZone())}
-      // showMonthAndYearPickers='true'
-      errorMessage={isInvalid ? "주말엔 놀기" : undefined}
+      errorMessage={isInvalid ? weekendMsg : undefined}
       isInvalid={isInvalid}
-      value={date}
-      onChange={(sdate) => {selectDate(sdate) }}
+      // value={'20230303'}
+      onChange={(calDate) => {selectDate(calDate) }}
       />
     </I18nProvider>
   )

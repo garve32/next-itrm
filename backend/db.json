@@ -30,7 +30,7 @@
         "TODO_ID": "HWTW_BSP_A0004.1",
         "TODO_DT": "20240712",
         "DESCRIPTION": "정상 확인",
-        "PROGRESS": "S",
+        "PROGRESS": "",
         "UPDATE_DT": "2024-07-12 08:16:53",
         "UPDATE_ID": "garve32"
       },
@@ -209,7 +209,7 @@
       "TODO_ID": "HWTW_BSP_A0004.1",
       "TODO_DT": "20240712",
       "DESCRIPTION": "정상 확인",
-      "PROGRESS": "S",
+      "PROGRESS": "",
       "UPDATE_DT": "2024-07-12 08:16:53",
       "UPDATE_ID": "garve32"
     },
@@ -242,7 +242,7 @@
       "TODO_ID": "HWTW_BSP_D0001.1",
       "TODO_DT": "20240712",
       "DESCRIPTION": "정상 확인",
-      "PROGRESS": "S",
+      "PROGRESS": "",
       "UPDATE_DT": "2024-07-12 08:16:59",
       "UPDATE_ID": "garve32"
     },
@@ -275,7 +275,7 @@
       "TODO_ID": "HWTW_COMP_A0002.1",
       "TODO_DT": "20240712",
       "DESCRIPTION": "정상 확인",
-      "PROGRESS": "S",
+      "PROGRESS": "",
       "UPDATE_DT": "2024-07-12 08:17:33",
       "UPDATE_ID": "garve32"
     },

@@ -8,10 +8,10 @@ export default function TopNav() {
   const router = useRouter();
   const currentRoute = router.pathname;
   const path = router.asPath;
-  console.log(currentRoute);
-  console.log(path);
+  // console.log(currentRoute);
+  // console.log(path);
 
-  const navigationRoutes = ["ITRM", "Contact"];
+  const navigationRoutes = ["ITRM", "SignIn"];
 
   return (
     <CustomNavbar isBordered>
@@ -25,9 +25,9 @@ export default function TopNav() {
         {navigationRoutes.map((item) => {
           const isActive = currentRoute === '/'+item.toLowerCase() ;
           const activeColor = isActive?'default':'foreground';
-          console.log('currentRoute = ' + currentRoute);
-          console.log('item = ' + item);
-          console.log('isActive = ' + isActive);
+          // console.log('currentRoute = ' + currentRoute);
+          // console.log('item = ' + item);
+          // console.log('isActive = ' + isActive);
           return (
             <NavbarItem key={item} isActive={isActive} >
               <Link color={activeColor} href={`/${item.toLowerCase()}`} size='md' className='font-bold hover:text-primary'>

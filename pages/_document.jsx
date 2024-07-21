@@ -4,15 +4,15 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-      <link
+      {/* <link
         rel="preload"
         href="../font/NanumGothic.woff2"
         as="font"
         crossOrigin=""
         type="font/woff2"
-      />
+      /> */}
       </Head>
-      <body>
+      <body className="flex justify-center">
         <Main />
         <NextScript />
       </body>
